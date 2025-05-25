@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yang Sing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="logo" id="header">
+        <img src="./Image/Logo.svg" alt="Yang Sing">
+    </div>
+    <div class="info">
+        <h3>61 Clarendon Road</h3>
+        <h3>Morecambe</h3>
+        <h3>LA4 4HT</h3>
+        <h3>01524 426688</h3>
+    </div>
+    <!-- Embedded CSV data -->
+    <textarea id="csv-data" style="display:none;">
+        name,type,price
+        Hot Special Hors D'oeuvres (Per Head),Appetisers,4.50
+        Crispy Peking Duck (Per Quarter),Appetisers,7.10
+        Thai Fish Cake,Appetisers,3.10
+        Salt & Pepper Chicken,Appetisers,5.00
+        Salt & Pepper Mushrooms,Appetisers,4.50
+        Salt & Pepper Chicken Wings,Appetisers,4.50
+        Salt & Pepper Squid,Appetisers,5.00
+        Chicken Balls (Sweet & Sour Dip),Appetisers,3.90
+        Sesame Prawn Toast,Appetisers,3.20
+        Spring Roll,Appetisers,2.50
+        Pork Chop with Salt & Pepper 9,Appetisers,5.00
+        Barbecued Ribs with Syrup,Appetisers,5.00
+        Ribs in Capital Sauce,Appetisers,5.00
+        Ribs in Black Bean Sauce,Appetisers,5.00
+        Ribs with Salt & Pepper,Appetisers,5.00
+        King Prawns with Salt & Pepper,Appetisers,5.90
+        Deep Fried Wan Ton,Appetisers,3.00
+        Deep Fried Crab Claws,Appetisers,3.00
+        Grilled Dumplings,Appetisers,3.50
+        Skewered Chicken in Malaysian Style,Appetisers,4.90
+        Skewered Beef in Malaysian Style,Appetisers,4.90
+        Skewered King Prawns in Malaysian Style ,Appetisers,5.50
+        King Prawns wrapped in Bacon,Appetisers,5.90
+        Char Siu Buns (Steamned) (2),Appetisers,2.80
+        Prawn Cocktail,Appetisers,2.80
+        Siew Mai (Steamed or Fried) (4),Appetisers,2.80
+        Crab Stick Cocktail,Appetisers,2.80
+        Deep Fried Crispy Seaweed,Appetisers,3.00
+        ,,
+        Chicken & Sweetcorn Soup,Soups,2.50
+        Crab Stick & Sweetcorn Soup,Soups,2.50
+        Hot & Sour Soup,Soups,3.00
+        Special Soup,Soups,3.00
+        Chicken & Noodle Soup,Soups,3.00
+        Chicken & Mushroom Soup,Soups,3.00
+        Wan Ton Soup,Soups,3.50
+        Wan Ton & Noodle Soup,Soups,3.50
+        Wan Ton Char Siu Noodle Soup,Soups,4.00
+        Chicken Tomato Soup (Beef or Pork),Soups,3.00
+        ,,
+        Shredded Fillet Steak in Chilli & Sweet Sauce,Special Dishes,4.90
+        Deep Fried Squid in Chilli & Sweet Sauce,Special Dishes,4.90
+        Deep Fried Squid in Szechuan Style,Special Dishes,4.90
+        Deep Fried Squid with Ginger & Spring Onions,Special Dishes,4.90
+        Fillet Steak in Black Pepper Sauce,Special Dishes,7.10
+        Fillet Steak in Black Bean Sauce,Special Dishes,7.10
+        Fillet Steak in Satay Sauce,Special Dishes,7.10
+        Fillet Steak in Cantonese Style,Special Dishes,7.10
+        Fillet Steak with Ginger & Spring Onion,Special Dishes,7.10
+        Special Curry,Special Dishes,5.50
+        Special in Thai Green Curry,Special Dishes,5.50
+        King Prawn Stuffing,Special Dishes,5.50
+        Special in Sambal Sauce,Special Dishes,5.50
+        King Prawns in Malaysian Sauce (Sweer & Spicy),Special Dishes,5.50
+        ,,
+        Chicken in Black Bean Sauce,Chicken Dishes,4.50
+        Chicken with Mushrooms,Chicken Dishes,4.50
+        Chicken in Sweet & Sour Sauce (Hong Kong Style),Chicken Dishes,4.50
+        Chicken in Curry Sauce V ,Chicken Dishes,4.50
+        Chicken with Cashew Nuts in Yellow Bean Sauce ,Chicken Dishes,4.50
+        Chicken in Szechuan Style,Chicken Dishes,4.50
+        Chicken with Chinese Mushrooms & Bamboo Shoots ,Chicken Dishes,4.50
+        Chicken Fu Yung ,Chicken Dishes,4.50
+        Chicken in Lemon Sauce,Chicken Dishes,4.50
+        Chicken in Orange Sauce,Chicken Dishes,4.50
+        Chicken with Garlic,Chicken Dishes,4.50
+        Chicken with Pineapple ,Chicken Dishes,4.50
+        Shredded Chicken in Chilli & Sweet Sauce,Chicken Dishes,4.50
+        Chicken with Chilli,Chicken Dishes,4.50
+        Chicken in Satay Sauce,Chicken Dishes,4.50
+        Chicken in Cantonese Style,Chicken Dishes,4.50
+        Chicken with Ginger & Spring Onion,Chicken Dishes,4.50
+        Stir Fried Chicken with Spring Onion,Chicken Dishes,4.50
+        Chicken in Tomato Sauce,Chicken Dishes,4.50
+        Chicken with Mixed Vegetables,Chicken Dishes,4.50
+        Chicken with Cashewnuts,Chicken Dishes,4.50
+        Chicken in Peking Style,Chicken Dishes,4.50
+        ,,
+        Beef in Black Bean Sauce,Beef Dishes,4.80
+        Beef with Mushrooms,Beef Dishes,4.80
+        Beef in Curry Sauce,Beef Dishes,4.80
+        Beef in Szechuan Style,Beef Dishes,4.80
+        Beef with Chinese Mushrooms & Bamboo Shoots,Beef Dishes,4.80
+        Beef with Pineapple,Beef Dishes,4.80
+        Beef with Chilli,Beef Dishes,4.80
+        Beef in Satay Sauce,Beef Dishes,4.80
+        Beef in Cantonese Style,Beef Dishes,4.80
+        Beef with Ginger & Spring Onion,Beef Dishes,4.80
+        Stir Fried Beef with Spring Onion,Beef Dishes,4.80
+        Beef in Tomato Sauce,Beef Dishes,4.80
+        Beef with Mixed Vegetables,Beef Dishes,4.80
+        Beef in Peking Style,Beef Dishes,4.80
+        ,,
+        Pork in Black Bean Sauce,Pork Dishes,4.50
+        Pork with Mushrooms,Pork Dishes,4.50
+        Pork in Sweet & Sour Sauce (Hong Kong Style),Pork Dishes,4.50
+        Pork in Curry Sauce,Pork Dishes,4.50
+        Pork in Szechuan Style,Pork Dishes,4.50
+        Pork Fu Yung,Pork Dishes,4.50
+        Pork with Chilli,Pork Dishes,4.50
+        Pork in Satay Sauce,Pork Dishes,4.50
+        Pork in Cantonese Style,Pork Dishes,4.50
+        Pork with Mixed Vegetables,Pork Dishes,4.50
+        ,,
+        King Prawns in Black Bean Sauce,King Prawn Dishes,5.10
+        King Prawns with Mushrooms,King Prawn Dishes,5.10
+        King Prawns in Sweet & Sour Sauce,King Prawn Dishes,5.10
+        King Prawns in Curry Sauce,King Prawn Dishes,5.10
+        King Prawns in Szechuan Style,King Prawn Dishes,5.10
+        King Prawn Fu Yung,King Prawn Dishes,5.10
+        King Prawns in Satay Sauce,King Prawn Dishes,5.10
+        King Prawns in Cantonese Style,King Prawn Dishes,5.10
+        King Prawns with Ginger & Spring Onion.,King Prawn Dishes,5.10
+        King Prawns with Mixed Vegetables,King Prawn Dishes,5.10
+        King Prawns in Peking Style,King Prawn Dishes,5.10
+        ,,
+        Roast Duck in Black Bean Sauce,Roast Duck Dishes,5.10
+        Roast Duck with Mushrooms,Roast Duck Dishes,5.10
+        Roast Duck in Curry Sauce,Roast Duck Dishes,5.10
+        Roast Duck in Lemon Sauce,Roast Duck Dishes,5.10
+        Roast Duck in Orange Sauce,Roast Duck Dishes,5.10
+        Roast Duck with Chinese Mushrooms & Bamboo Shoots,Roast Duck Dishes,5.10
+        Roast Duck with Pineapple,Roast Duck Dishes,5.10
+        Roast Duck in Plum Sauce.,Roast Duck Dishes,5.10
+        Roast Duck in Cantonese Style (Sweer),Roast Duck Dishes,5.10
+        ,,
+        Lamb in Curry Sauce,Lamb Dishes,5.10
+        Lamb in Black Bean Sauce,Lamb Dishes,5.10
+        Lamb with Ginger & Spring Onion,Lamb Dishes,5.10
+        Lamb in Satay Sauce,Lamb Dishes,5.10
+        Lamb in Szechuan Style,Lamb Dishes,5.10
+        Lamb in Black Pepper Sauce,Lamb Dishes,5.10
+        ,,
+        House Special Fried Rice,Rice Dishes,5.50
+        Duck Fried Rice,Rice Dishes,5.20
+        King Prawn Fried Rice,Rice Dishes,5.20
+        Beef Fried Rice,Rice Dishes,5.00
+        Chicken Fried Rice,Rice Dishes,5.00
+        Roast Pork Fried Rice,Rice Dishes,5.00
+        Shrimp Fried Rice,Rice Dishes,5.00
+        Mushroom Fried Rice,Rice Dishes,4.50
+        Mixed Vegetable Fried Rice,Rice Dishes,4.50
+        Singapore Fried Rice ,Rice Dishes,5.20
+        Malaysian Fried Rice ,Rice Dishes,5.20
+        Thai Fried Rice,Rice Dishes,5.00
+        Ham Fried Rice,Rice Dishes,5.00
+        Egg Fried Rice,Rice Dishes,2.30
+        Boiled Rice,Rice Dishes,2.10
+        ,,
+        House Special Chow Mein,Chow Mein,5.50
+        King Prawn Chow Mein.,Chow Mein,5.00
+        Beef Chow Mein,Chow Mein,5.00
+        Chicken Chow Mein,Chow Mein,5.00
+        Shrimps Chow Mein,Chow Mein,5.00
+        Roast Pork Chow Mein,Chow Mein,5.00
+        Mixed Vegetable Chow Mein,Chow Mein,4.50
+        Mushroom Chow Mein,Chow Mein,4.50
+        Singapore Chow Mein,Chow Mein,5.20
+        Malaysian Chow Mein,Chow Mein,5.20
+        Plain Chow Mein (With Onions & Beansprouts),Chow Mein,3.50
+        Singapore Rice Noodles (Vermicelli),Chow Mein,5.20
+        Duck Rice Noodles (Vermicelli),Chow Mein,5.20
+        Beef Rice Noodles (Vermicelli),Chow Mein,5.20
+        Duck Chow Mein,Chow Mein,5.00
+        Thai Style Chow Mein,Chow Mein,5.00
+        ,,
+        Vegetarian Spring Rolls,Vegetarian Dishes,2.50
+        Stir Fried Mixed Vegetables,Vegetarian Dishes,3.50
+        Stir Fried Mushrooms,Vegetarian Dishes,3.50
+        Stir Fried Onions,Vegetarian Dishes,3.50
+        Stir Fried Beansprouts,Vegetarian Dishes,3.50
+        Mixed Vegetables in Sweet & Sour Sauce,Vegetarian Dishes,3.80
+        Mixed Vegetables in Satay Sauce.,Vegetarian Dishes,3.80
+        Mixed Vegetables in Cantonese Style,Vegetarian Dishes,3.80
+        Mixed Vegetables with Chilli,Vegetarian Dishes,3.80
+        Mixed Vegetables in Curry Sauce.,Vegetarian Dishes,3.80
+        Straw Mushrooms with Broccoli.,Vegetarian Dishes,3.80
+        Battered Mushrooms in Satay Sauce,Vegetarian Dishes,3.80
+        Battered Mushrooms in Curry Sauce 9,Vegetarian Dishes,3.80
+        Battarae Mushrooms in Cantonese Style.,Vegetarian Dishes,3.80
+        ,,
+        Sirloin Steak,English Dishes,9.00
+        Chicken Omelette,English Dishes,5.50
+        Spanish Omelette.,English Dishes,6.00
+        Seafood Omelette,English Dishes,6.50
+        Cod Fish & Chips,English Dishes,4.00
+        Cod Fish,English Dishes,3.50
+        Sausage & Chips,English Dishes,3.00
+        Chicken & Chips,English Dishes,5.00
+        Fried Fillet Steak with Onions & Chips,English Dishes,8.50
+        King Prawn Omelette,English Dishes,5.60
+        Prawn Salad.,English Dishes,4.50
+        Chicken Salad,English Dishes,4.00
+        Scampi with Chips or Salad,English Dishes,4.50
+        Chicken Nuggets & Chips,English Dishes,3.00
+        ,,
+        "Double Luckiness.
+        (Egg Fried Rice base topped with Crispy Duck &
+        Roast Pork served with a pot of BBQ Sauce)",Additional Menu,6.50
+        "Double Luckiness.
+        (Egg Fried Rice base topped with Crispy Duck &
+        Roast Pork served with a pot of BBQ Sauce)",Additional Menu,6.50
+        Salt & Pepper Box,Additional Menu,11.50
+        ,,
+        Chips,Side Orders,1.80
+        Curry Sauce (Small),Side Orders,1.50
+        Curry Sauce (Large),Side Orders,1.80
+        Sweet & Sour Sauce (Small),Side Orders,1.50
+        Sweet & Sour Sauce (Large),Side Orders,1.80
+        Black Pepper Sauce (Small),Side Orders,1.50
+        Black Pepper Sauce (Large),Side Orders,1.80
+        Gravy (Small),Side Orders,1.50
+        Gravy (Large),Side Orders,1.80
+        Prawn Crackers,Side Orders,1.80
+        Banana Fritters (2) ,Side Orders,2.50
+        Pineapple Fritters (2),Side Orders,2.50
+        Salt & Pepper Chips,Side Orders,3.00
+        "Large Portion of Chips, Fried Rice & Curry Sauce",Side Orders,3.50
+        "Large Portion of Chips, Fried Rice & BBQ Sauce",Side Orders,3.50
+        "Large Portion of Chips, Fried Rice & Sweet & Sour Sauce",Side Orders,3.50
+        ,,
+        "Cans of Drink (Coke, Diet Coke, 7Up, Vimto, Pepsi or Tango)",Drinks,1.00
+        J2O,Drinks,1.50
+        "Big Bottle of Drinks (Coke, Diet Coke or Fanta)",Drinks,2.50
+        ,,
+        "BANQUETS A
+        (Spring Roll or Sesame Toast
+        Chicken or Beef with Any Sauce
+        Egg Fried Rice)",Banquets,8.00
+        "BANQUETS B
+        (Chicken & Sweetcorn Soup
+        Prawn Crackers
+        Chicken in Black Bean Sauce
+        Beef with Mushrooms
+        2 x Fried Rice)",Banquets,15.50
+        "BANQUETS C
+        (Chicken & Sweetcorn Soup
+        Prawn Crackers
+        Aromatic Crispy Peking Duck
+        Fillet Steak in Cantonese Style
+        Chicken with Mushrooms
+        Beef in Black Bean Sauce
+        3 x Fried Rice)",Banquets,25.50
+        ,,
+        Barbecued Spare Ribs,Special Meal,
+        Sesame Prawn Toast (4),Special Meal,
+        Crispy Chicken Rolls (4),Special Meal,
+        Vegetarian Spring Rolls (4),Special Meal,
+        Chicken in Black Bean Sauce,Special Meal,
+        Beef in Black Bean Sauce,Special Meal,
+        Pork in Black Bean Sauce,Special Meal,
+        Chicken with Mushroom,Special Meal,
+        Beef with Mushroom,Special Meal,
+        Pork with Mushroom,Special Meal,
+        Stir Fried Mixed Vegetables,Special Meal,
+        Stir Fried Beansprouts,Special Meal,
+        Sweet & Sour Chicken Balls,Special Meal,
+        Salt & Pepper Chicken,Special Meal,
+        Sweet & Sour Chicken (Hong Kong Style),Special Meal,
+        Sweet & Sour Pork (Hong Kong Style),Special Meal,
+        Crispy Chilli Chicken,Special Meal,
+        Crispy Chilli Beef,Special Meal,
+        Chicken Curry,Special Meal,
+        Beef Curry,Special Meal,
+        Pork Curry,Special Meal,
+        Chicken Fried Rice,Special Meal,
+        Chicken Chow Mein,Special Meal,
+        Egg Fried Rice,Special Meal,
+        Boiled Rice,Special Meal,
+        Chips,Special Meal,
+        Salt & Pepper Chicken Wings,Special Meal,
+        Salt & Pepper Chips,Special Meal,
+
+    </textarea>
+
+    <!-- <div class="menu-grid" id="menu">
+        <div class="menu-btn" id="Appetisers">
+            <h1><a class ="title" >Appetisers</a></h1>
+        </div>
+        <div class="menu-btn" id="Soup">
+            <h1><a class ="title" >Soup</a></h1>
+        </div>
+        <div class="menu-btn" id="Special Dishes">
+            <h1><a class ="title" >Special Dishes</a></h1>
+        </div>
+        <div class="menu-btn" id="Drink">
+            <h1><a class ="title" >Drink</a></h1>
+        </div>
+    </div> -->
+    <div class="menu-name">
+        <h1><a class="title">Menu</a></h1>
+    </div>
+    <div class="menu-select">
+        <!-- Dropdown Content -->
+        <div class="selection">
+            <a class="menu-choose" id="Appetisers" href="#">Appetisers</a>
+            <a class="menu-choose" id="Soups" href="#">Soups</a>
+            <a class="menu-choose" id="Special Dishes" href="#">Special Dishes</a>
+            <a class="menu-choose" id="Chicken Dishes" href="#">Chicken Dishes</a>
+            <a class="menu-choose" id="Beef Dishes" href="#">Beef Dishes</a>
+            <a class="menu-choose" id="Pork Dishes" href="#">Pork Dishes</a>
+            <a class="menu-choose" id="King Prawn Dishes" href="#">King Prawn Dishes</a>
+            <a class="menu-choose" id="Roast Duck Dishes" href="#">Roast Duck Dishes</a>
+            <a class="menu-choose" id="Lamb Dishes" href="#">Lamb Dishes</a>
+            <a class="menu-choose" id="Rice Dishes" href="#">Rice Dishes</a>
+            <a class="menu-choose" id="Chow Mein" href="#">Chow Mein</a>
+            <a class="menu-choose" id="Vegetarian" href="#">Vegetarian</a>
+            <a class="menu-choose" id="English Dishes" href="#">English Dishes</a>
+            <a class="menu-choose" id="Additional Menu" href="#">Additional Menu</a>
+            <a class="menu-choose" id="Side Orders" href="#">Side Orders</a>
+            <a class="menu-choose" id="Drinks" href="#">Drinks</a>
+            <a class="menu-choose" id="Banquets" href="#">Banquets</a>
+            <a class="menu-choose" id="Special Meal" href="#">Special Meal</a>
+        </div>
+    </div>
+    <div class="menu-dropdown-box">
+        <select id="menu-dropdown">
+            <option value="Appetisers" >Appetisers</option>
+            <option value="Soups" >Soups</option>
+            <option value="Special Dishes" >Special Dishes</option>
+            <option value="Chicken Dishes" >Chicken Dishes</option>
+            <option value="Beef Dishes" >Beef Dishes</option>
+            <option value="Pork Dishes" >Pork Dishes</option>
+            <option value="King Prawn Dishes" >King Prawn Dishes</option>
+            <option value="Roast Duck Dishes" >Roast Duck Dishes</option>
+            <option value="Lamb Dishes" >Lamb Dishes</option>
+            <option value="Rice Dishes" >Rice Dishes</option>
+            <option value="Chow Mein" >Chow Mein</option>
+            <option value="Vegetarian" >Vegetarian</option>
+            <option value="English Dishes" >English Dishes</option>
+            <option value="Additional Menu" >Additional Menu</option>
+            <option value="Side Orders" >Side Orders</option>
+            <option value="Drinks" >Drinks</option>
+            <option value="Banquets" >Banquets</option>
+            <option value="Special Menu" >Special Menu</option>
+        </select>
+    </div>
+    <div class="special-box" id="special-menu">
+        <h1>£15.90 for any 5 Dishes</h1>
+    </div>
+    <div class="menu-list" id="menu-display">
+        <div class="menu-list" id="menu-items"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Yang Sing. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="javascript:void(0);" class="footer-link" data-modal="privacyModal">Privacy Policy</a></li>
+                <li><a href="javascript:void(0);" class="footer-link" data-modal="termsModal">Terms of Service</a></li>
+                <li><a href="javascript:void(0);" class="footer-link" data-modal="contactModal">Contact Us</a></li>
+            </ul>
+            <!-- <div class="social-media">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div> -->
+        </div>
+    </footer>
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>This website does not collect any data however it does use cloudflare page to host <br>
+                (<a
+                    href=https://www.cloudflare.com/en-gb/privacypolicy>https://www.cloudflare.com/en-gb/privacypolicy</a>)
+            </p>
+            <section>
+                <h2>Introduction</h2>
+                <p>At Yang Sing, we respect your privacy. This Privacy Policy explains how we handle personal data
+                    when you visit our website.</p>
+            </section>
+
+            <section>
+                <h2>What Data We Process</h2>
+                <p>We do not actively collect personal data from users visiting our website. However, third-party
+                    services such as <strong>Cloudflare</strong> may collect technical data such as your IP address,
+                    browser type, and device information for purposes like website security and performance
+                    optimization.</p>
+            </section>
+
+            <section>
+                <h2>Third-Party Services</h2>
+                <p>We use <strong>Cloudflare</strong> to optimize the performance of our website and protect it from
+                    security threats such as DDoS attacks. <strong>Cloudflare</strong> may collect your IP address,
+                    browser details, and other technical information to provide these services.</p>
+                <p>For more information on how <strong>Cloudflare</strong> processes your data, please refer to their <a
+                        href="https://www.cloudflare.com/privacypolicy" target="_blank">Privacy Policy</a>.</p>
+            </section>
+
+            <section>
+                <h2>Legal Basis for Processing</h2>
+                <p>The personal data processed by Cloudflare (such as IP addresses) is processed based on legitimate
+                    interest to ensure the security and performance of our website.</p>
+            </section>
+
+            <section>
+                <h2>Cookies</h2>
+                <p>We do not actively set cookies for tracking purposes. However, <strong>Cloudflare</strong> and other
+                    third-party services may use cookies to provide performance and security features. By using our
+                    website, you consent to the use of these cookies.</p>
+                <p>You can learn more about how <strong>Cloudflare</strong> uses cookies in their <a
+                        href="https://www.cloudflare.com/cookie-policy" target="_blank">Cookie Policy</a>.</p>
+            </section>
+
+            <section>
+                <h2>Your Rights</h2>
+                <p>While we do not actively collect personal data, you still have rights under the GDPR:</p>
+                <ul>
+                    <li>The right to <strong>access</strong> your data.</li>
+                    <li>The right to <strong>correct</strong> your data.</li>
+                    <li>The right to <strong>erase</strong> your data (though this may not apply to data stored by third
+                        parties like Cloudflare).</li>
+                    <li>The right to <strong>object</strong> to data processing.</li>
+                </ul>
+                <p>To exercise these rights or if you have any questions about how your data is being processed, please
+                    contact us.</p>
+            </section>
+
+            <section>
+                <h2>Data Retention</h2>
+                <p>We do not store personal data ourselves. However, <strong>Cloudflare</strong> may retain data such as
+                    IP addresses for security and performance purposes as outlined in their <a
+                        href="https://www.cloudflare.com/privacypolicy" target="_blank">Privacy Policy</a>.</p>
+            </section>
+
+            <section>
+                <h2>International Data Transfers</h2>
+                <p>Personal data may be transferred to countries outside the European Economic Area (EEA), including the
+                    United States, where <strong>Cloudflare</strong> operates. <strong>Cloudflare</strong> has
+                    implemented appropriate safeguards to ensure the protection of your data.</p>
+            </section>
+
+            <!-- <a href="https://yourwebsite.com/full-privacy-policy" target="_blank">Read the full Privacy Policy</a> -->
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms of Service</h2>
+            <p><strong>Effective Date:</strong> 25/05/2025</p>
+            <p>Welcome to Yang Sing's website ("we", "us", or "our"). By accessing or using our website, you agree to be
+                bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our
+                Site.</p>
+            <section>
+                <h2>Use of the Site</h2>
+                <p>You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of,
+                    restrict, or inhibit anyone else's use and enjoyment of the Site.</p>
+            </section>
+
+            <section>
+                <h2>Intellectual Property</h2>
+                <p>All content on this Site, including text, graphics, logos, images, and software, is the property of
+                    this website or its content suppliers and is protected by applicable intellectual property
+                    laws. You may not reproduce, distribute, or modify any part of this Site without our prior written
+                    consent.</p>
+            </section>
+
+            <section>
+                <h2>Links to Third-Party Websites</h2>
+                <p>This Site may contain links to external websites that are not provided or maintained by us. We do not
+                    guarantee the accuracy, relevance, or reliability of any third-party content. Use these links at
+                    your own risk.</p>
+            </section>
+
+            <section>
+                <h2>Disclaimer</h2>
+                <p>This Site is provided on an "as-is" and "as-available" basis. We make no warranties, express or
+                    implied, regarding the availability, accuracy, or reliability of the Site or its content. You use
+                    the Site at your own risk.</p>
+            </section>
+
+            <section>
+                <h2>Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, we shall not be liable for any damages, direct or indirect,
+                    arising out of or in connection with your use of or inability to use the Site.</p>
+            </section>
+            <section>
+                <h2>Pricing Information</h2>
+                <p>While we strive to keep all pricing and product information accurate and up to date, the information
+                    on this Site may not always reflect the most current pricing. We reserve the right to change prices
+                    at any time without notice. Pricing errors may occur, and we are not obligated to honor misprinted
+                    or outdated prices.</p>
+            </section>
+            <section>
+                <h2>Changes to These Terms</h2>
+                <p>We reserve the right to modify these Terms at any time without prior notice. Your continued use of
+                    the Site following any changes constitutes your acceptance of the new Terms. Please review this page
+                    periodically.</p>
+            </section>
+
+            <!-- <a href="https://yourwebsite.com/full-terms" target="_blank">Read the full Terms of Service</a> -->
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <p>
+                61 Clarendon Road
+                <br>Morecambe
+                <br>LA4 4HT
+                <br>01524 426688
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
